@@ -1,0 +1,7 @@
+version: 2.1
+
+description: |
+  Description goes here
+display:
+  home_url: "https://github.com/trustedshops-public/circleci-orb-pact"
+  source_url: "https://github.com/trustedshops-public/circleci-orb-pact"

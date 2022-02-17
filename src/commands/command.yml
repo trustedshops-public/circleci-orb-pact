@@ -1,0 +1,12 @@
+description: >
+  Command description goes here
+parameters:
+  name:
+    default: Default value
+    description: Description
+    type: parameter type
+steps:
+  - run:
+      name: Step name
+      command: |
+        # Step action

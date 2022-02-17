@@ -1,0 +1,15 @@
+description: >
+  Job description goes here
+
+executor: default
+
+parameters:
+  name:
+    default: Default value
+    description: Description
+    type: parameter type
+
+steps:
+  - checkout
+  - command:
+      parameter: <<parameters.name>>

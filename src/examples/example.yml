@@ -1,0 +1,14 @@
+description: Help users getting started with the orb
+usage:
+  version: 2.1
+  orbs:
+    pact: trustedshops-public/pact@<version>
+  workflows:
+    version: 2
+    continious:
+      jobs:
+        - pact/job:
+            name: pact
+            filters:
+              branches:
+                only: [ main ]
