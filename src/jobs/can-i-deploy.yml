@@ -1,0 +1,50 @@
+description: >
+  Check if pact contract is fullfilled and changes can be deployed
+parameters:
+  executor:
+    type: executor
+    description: Executor to use
+    default: pact-cli
+  version:
+    type: string
+    description: Version of the project
+    default: $CIRCLE_SHA1
+  to:
+    type: string
+    description: >
+      The tag that represents the branch or environment of the
+      integrated applications for which you want to check the
+      verification result status.
+  pact-broker-url:
+    type: env_var_name
+    description: Pact broker url to use
+    default: PACTBROKER_BASE_URL
+  pact-broker-token:
+    type: env_var_name
+    description: Token used for authentication against pactbroker
+    default: PACTBROKER_TOKEN
+  retry-attempts-while-unkown:
+    type: integer
+    description: >
+      The number of times to retry while there is an unknown
+      verification result (ie. the provider verification is likely
+      still running)
+    default: 30
+  retry-interval-seconds:
+    type: integer
+    description: >
+      The time between retries in seconds. Use in conjuction with retry-while-unknown
+    default: 10
+  pacticipant:
+    type: string
+    description: The name of the pacticipant that was deployed
+executor: <<parameters.executor>>
+steps:
+  - can-i-deploy:
+      pacticipant: <<parameters.pacticipant>>
+      version: <<parameters.version>>
+      to: <<parameters.to>>
+      pact-broker-url: <<parameters.pact-broker-url>>
+      pact-broker-token: <<parameters.pact-broker-token>>
+      retry-attempts-while-unkown: <<parameters.retry-attempts-while-unkown>>
+      retry-interval-seconds: <<parameters.retry-interval-seconds>>

@@ -1,0 +1,20 @@
+description: >
+  Example on using can i deploy with your deploy process
+usage:
+  version: 2.1
+  orbs:
+    pact: trustedshops-public/pact@<version>
+  workflows:
+    version: 2
+    deploy:
+      jobs:
+        - pact/can-i-deploy:
+            name: can-i-deploy-prod
+            to: prod
+            pacticipant: billing-service
+            context:
+              - pact # Create global context with PACTBROKER_BASE_URL and PACTBROKER_TOKEN
+            filters:
+              branches:
+                only: [ main ]
+        # deploy logic goes here with requirement on can-i-deploy-prod
