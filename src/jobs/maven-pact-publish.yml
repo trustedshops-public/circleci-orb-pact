@@ -1,5 +1,5 @@
 description: >
-  Run maven tests and publish pact contract using maven plugin 
+  Run maven tests and publish pact contract using maven plugin
 parameters:
   executor:
     type: executor
