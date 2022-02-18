@@ -1,0 +1,46 @@
+description: >
+  Check if you can deploy
+executor: pact-cli
+parameters:
+  version:
+    type: string
+    description: Version of the project
+    default: $CIRCLE_SHA1
+  to:
+    type: string
+    description: >
+      The tag that represents the branch or environment of the
+      integrated applications for which you want to check the
+      verification result status.
+  pact-broker-url:
+    type: env_var_name
+    description: Pact broker url to use
+    default: PACTBROKER_BASE_URL
+  pact-broker-token:
+    type: env_var_name
+    description: Token used for authentication against pactbroker
+  retry-attempts-while-unkown:
+    type: integer
+    description: >
+      The number of times to retry while there is an unknown
+      verification result (ie. the provider verification is likely
+      still running)
+    default: 30
+  retry-interval-seconds:
+    type: integr
+    description: >
+      The time between retries in seconds. Use in conjuction with retry-while-unknown
+    default: 10
+steps:
+  - checkout
+  - run:
+      name: Can i deploy?
+      command: |
+        pact-broker can-i-deploy \
+          --pacticipant=api-declaration-bp \
+          --version=<<parameters.version>> \
+          --to=<<parameters.to>> \
+          --broker-base-url=$<<parameters.pact-broker-url>> \
+          --broker-token=$<<parameters.pact-broker-token>> \
+          --retry-while-unknown=<<parameters.retry-attempts-while-unknown>> \
+          --retry-interval=<<parameters.retry-interval-seconds>>
