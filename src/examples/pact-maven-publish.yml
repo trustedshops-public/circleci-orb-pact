@@ -1,4 +1,5 @@
-description: Help users getting started with the orb
+description: >
+  Example for publishing pact contract using the maven plugin
 usage:
   version: 2.1
   orbs:

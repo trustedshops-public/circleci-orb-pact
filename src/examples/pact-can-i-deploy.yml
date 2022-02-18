@@ -1,4 +1,5 @@
-description: Example on using can i deploy
+description: >
+  Example on using can i deploy with your deploy process
 usage:
   version: 2.1
   orbs:
