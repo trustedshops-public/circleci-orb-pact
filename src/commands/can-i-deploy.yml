@@ -1,6 +1,5 @@
 description: >
   Check if you can deploy
-executor: pact-cli
 parameters:
   version:
     type: string
