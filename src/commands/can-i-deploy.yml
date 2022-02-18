@@ -26,12 +26,11 @@ parameters:
       still running)
     default: 30
   retry-interval-seconds:
-    type: integr
+    type: integer
     description: >
       The time between retries in seconds. Use in conjuction with retry-while-unknown
     default: 10
 steps:
-  - checkout
   - run:
       name: Can i deploy?
       command: |
