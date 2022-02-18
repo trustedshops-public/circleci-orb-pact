@@ -27,6 +27,7 @@ parameters:
     description: Token used for authentication against pactbroker
     default: PACTBROKER_TOKEN
 steps:
+  - checkout
   - maven/with_cache:
       settings_file: <<parameters.settings-file>>
       steps:
