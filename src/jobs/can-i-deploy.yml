@@ -22,6 +22,7 @@ parameters:
   pact-broker-token:
     type: env_var_name
     description: Token used for authentication against pactbroker
+    default: PACTBROKER_TOKEN
   retry-attempts-while-unkown:
     type: integer
     description: >
