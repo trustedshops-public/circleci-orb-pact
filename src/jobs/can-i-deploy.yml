@@ -34,9 +34,13 @@ parameters:
     description: >
       The time between retries in seconds. Use in conjuction with retry-while-unknown
     default: 10
+  pacticipant:
+    type: string
+    description: The name of the pacticipant that was deployed
 executor: <<parameters.executor>>
 steps:
   - can-i-deploy:
+      pacticipant: <<parameters.pacticipant>>
       version: <<parameters.version>>
       to: <<parameters.to>>
       pact-broker-url: <<parameters.pact-broker-url>>
