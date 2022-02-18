@@ -29,6 +29,7 @@ parameters:
     type: env_var_name
     description: Token used for authentication against pactbroker
     default: PACTBROKER_TOKEN
+executor: <<parameters.executor>>
 steps:
   - maven-pact-publish:
       settings-file: <<parameters.settings-file>>
