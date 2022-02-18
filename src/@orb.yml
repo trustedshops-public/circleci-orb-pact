@@ -5,3 +5,6 @@ description: |
 display:
   home_url: "https://github.com/trustedshops-public/circleci-orb-pact"
   source_url: "https://github.com/trustedshops-public/circleci-orb-pact"
+
+orbs:
+  maven: circleci/maven@1.2.0
