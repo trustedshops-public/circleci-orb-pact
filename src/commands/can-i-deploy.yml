@@ -40,5 +40,5 @@ steps:
           --to=<<parameters.to>> \
           --broker-base-url=$<<parameters.pact-broker-url>> \
           --broker-token=$<<parameters.pact-broker-token>> \
-          --retry-while-unknown=<<parameters.retry-attempts-while-unknown>> \
+          --retry-while-unknown=<<parameters.retry-attempts-while-unkown>> \
           --retry-interval=<<parameters.retry-interval-seconds>>
