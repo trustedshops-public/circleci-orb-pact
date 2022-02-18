@@ -1,0 +1,18 @@
+description: Help users getting started with the orb
+usage:
+  version: 2.1
+  orbs:
+    pact: trustedshops-public/pact@<version>
+  workflows:
+    version: 2
+    continious:
+      jobs:
+        - pact/maven-publish:
+            name: pact-publish-prod
+            # The other options can be set via the maven plugin
+            to: prod
+            context:
+              - pact # Create global context with PACTBROKER_BASE_URL and PACTBROKER_TOKEN
+            filters:
+              branches:
+                only: [ main ]
