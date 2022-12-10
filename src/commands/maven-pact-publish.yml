@@ -37,5 +37,5 @@ steps:
               pact:publish
               -Dpact.consumer.version=<<parameters.version>>
               -Dpact.consumer.tag=<<parameters.to>>
-              -Dpact.pactBrokerUrl=$<<parameters.pact-broker-url>>
-              -Dpact.pactBrokerToken=$<<parameters.pact-broker-token>>
+              -Dpact.pactBrokerUrl="$<<parameters.pact-broker-url>>"
+              -Dpact.pactBrokerToken="$<<parameters.pact-broker-token>>"
