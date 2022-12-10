@@ -1,3 +1,10 @@
+## [1.2.0](https://github.com/trustedshops-public/circleci-orb-pact/compare/1.1.1...1.2.0) (2022-12-10)
+
+
+### Features
+
+* Make pact broker url for maven more robust ([9f34ca4](https://github.com/trustedshops-public/circleci-orb-pact/commit/9f34ca473ac8eee9ad3aa5c7c2597ac9663a4641))
+
 ## [1.1.1](https://github.com/trustedshops-public/circleci-orb-pact/compare/1.1.0...1.1.1) (2022-12-10)
 
 
