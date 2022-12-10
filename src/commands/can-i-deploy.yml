@@ -13,7 +13,7 @@ parameters:
       verification result status.
   pact-broker-url:
     type: env_var_name
-    description: Pact broker url to use
+    description: Pact broker url to use, must include protocl as well
     default: PACTBROKER_BASE_URL
   pact-broker-token:
     type: env_var_name

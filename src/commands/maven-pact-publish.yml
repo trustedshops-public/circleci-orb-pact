@@ -20,7 +20,7 @@ parameters:
       contract to.
   pact-broker-url:
     type: env_var_name
-    description: Pact broker url to use
+    description: Pact broker url to use. In case of http(s) in the url the protocol part is stripped as it is not required by the maven plugin
     default: PACTBROKER_BASE_URL
   pact-broker-token:
     type: env_var_name
@@ -37,5 +37,5 @@ steps:
               pact:publish
               -Dpact.consumer.version=<<parameters.version>>
               -Dpact.consumer.tag=<<parameters.to>>
-              -Dpact.pactBrokerUrl="$<<parameters.pact-broker-url>>"
+              -Dpact.pactBrokerUrl="${<<parameters.pact-broker-url>>#http*://}"
               -Dpact.pactBrokerToken="$<<parameters.pact-broker-token>>"
