@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/trustedshops-public/circleci-orb-pact/compare/1.1.0...1.1.1) (2022-12-10)
+
+
+### Bug Fixes
+
+* Quote pact broker env vars ([16a4828](https://github.com/trustedshops-public/circleci-orb-pact/commit/16a482806ff3312a2efc188a2612beb550ee82b4))
+
 ## [1.1.0](https://github.com/trustedshops-public/circleci-orb-pact/compare/1.0.0...1.1.0) (2022-12-06)
 
 
