@@ -5,7 +5,7 @@ circleci-orb-pact
 [![CircleCI Build Status](https://circleci.com/gh/trustedshops-public/circleci-orb-pact.svg?style=shield "CircleCI Build Status")](https://circleci.com/gh/trustedshops-public/circleci-orb-pact)
 [![CircleCI Orb Version](https://badges.circleci.com/orbs/trustedshops-public/pact.svg)](https://circleci.com/orbs/registry/orb/trustedshops-public/pact)
 
-CircleCI orb pact
+Circleci Orb to run pact tests in your pipelines and verify results to make sure your deployments adhere to the contract
 
 ## Resources
 
