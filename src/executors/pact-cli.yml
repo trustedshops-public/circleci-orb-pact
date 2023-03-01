@@ -4,6 +4,7 @@ docker:
   - image: 'pactfoundation/pact-cli:<<parameters.tag>>'
 parameters:
   tag:
+    # renovate: datasource=docker depName=pactfoundation/pact-cli versioning=docker
     default: 0.51.0.0
     description: >
       Pick a specific image variant:
