@@ -1,3 +1,10 @@
+## [1.2.1](https://github.com/trustedshops-public/circleci-orb-pact/compare/1.2.0...1.2.1) (2023-05-02)
+
+
+### Bug Fixes
+
+* **deps:** update pactfoundation/pact-cli docker tag to v0.51.0.2 ([#11](https://github.com/trustedshops-public/circleci-orb-pact/issues/11)) ([1b42864](https://github.com/trustedshops-public/circleci-orb-pact/commit/1b4286488052619f57de3a01ed05e36cd7328c8b))
+
 ## [1.2.0](https://github.com/trustedshops-public/circleci-orb-pact/compare/1.1.1...1.2.0) (2022-12-10)
 
 
