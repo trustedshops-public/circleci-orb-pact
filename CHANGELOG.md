@@ -1,3 +1,14 @@
+## [2.0.0](https://github.com/trustedshops-public/circleci-orb-pact/compare/1.2.1...2.0.0) (2023-05-26)
+
+
+### ⚠ BREAKING CHANGES
+
+* Make compatible with orb tools v12 (#14)
+
+### Code Refactoring
+
+* Make compatible with orb tools v12 ([#14](https://github.com/trustedshops-public/circleci-orb-pact/issues/14)) ([eefb7ca](https://github.com/trustedshops-public/circleci-orb-pact/commit/eefb7ca9bb73d2476027dd9125a4e5f4993f50de))
+
 ## [1.2.1](https://github.com/trustedshops-public/circleci-orb-pact/compare/1.2.0...1.2.1) (2023-05-02)
 
 
