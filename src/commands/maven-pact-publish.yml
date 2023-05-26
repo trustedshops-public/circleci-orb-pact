@@ -1,10 +1,10 @@
 description: >
   Run maven tests and publish pact contract using maven plugin
 parameters:
-  settings-file:
+  settings_file:
     type: string
     default: ""
-  test-goal:
+  test_goal:
     type: string
     default: "-Ppact-test test"
     description: Test goal to run
@@ -18,11 +18,11 @@ parameters:
       The tag that represents the branch or environment of the
       integrated applications for which you want to publish the
       contract to.
-  pact-broker-url:
+  pact_broker_url:
     type: env_var_name
     description: Pact broker url to use. In case of http(s) in the url the protocol part is stripped as it is not required by the maven plugin
     default: PACTBROKER_BASE_URL
-  pact-broker-token:
+  pact_broker_token:
     type: env_var_name
     description: Token used for authentication against pactbroker
     default: PACTBROKER_TOKEN
@@ -37,5 +37,5 @@ steps:
               pact:publish
               -Dpact.consumer.version=<<parameters.version>>
               -Dpact.consumer.tag=<<parameters.to>>
-              -Dpact.pactBrokerUrl="${<<parameters.pact-broker-url>>#http*://}"
-              -Dpact.pactBrokerToken="$<<parameters.pact-broker-token>>"
+              -Dpact.pactBrokerUrl="${<<parameters.pact_broker_url>>#http*://}"
+              -Dpact.pactBrokerToken="$<<parameters.pact_broker_token>>"
