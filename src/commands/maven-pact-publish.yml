@@ -29,11 +29,11 @@ parameters:
 steps:
   - checkout
   - maven/with_cache:
-      settings_file: <<parameters.settings-file>>
+      settings_file: <<parameters.settings_file>>
       steps:
         - run:
             name: Run and publish tests to pact broker
-            command: mvn <<parameters.test-goal>>
+            command: mvn <<parameters.test_goal>>
               pact:publish
               -Dpact.consumer.version=<<parameters.version>>
               -Dpact.consumer.tag=<<parameters.to>>
