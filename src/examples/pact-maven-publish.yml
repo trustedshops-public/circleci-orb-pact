@@ -8,7 +8,7 @@ usage:
     version: 2
     continious:
       jobs:
-        - pact/maven-publish:
+        - pact/maven_publish:
             name: pact-publish-prod
             # The other options can be set via the maven plugin
             to: prod

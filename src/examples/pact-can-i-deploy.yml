@@ -8,7 +8,7 @@ usage:
     version: 2
     deploy:
       jobs:
-        - pact/can-i-deploy:
+        - pact/can_i_deploy:
             name: can-i-deploy-prod
             to: prod
             pacticipant: billing-service

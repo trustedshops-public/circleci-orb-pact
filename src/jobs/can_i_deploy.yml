@@ -4,7 +4,7 @@ parameters:
   executor:
     type: executor
     description: Executor to use
-    default: pact-cli
+    default: pact_cli
   version:
     type: string
     description: Version of the project
@@ -15,22 +15,22 @@ parameters:
       The tag that represents the branch or environment of the
       integrated applications for which you want to check the
       verification result status.
-  pact-broker-url:
+  pact_broker_url:
     type: env_var_name
-    description: Pact broker url to use
+    description: Pact broker url to use, must include protocl as well
     default: PACTBROKER_BASE_URL
-  pact-broker-token:
+  pact_broker_token:
     type: env_var_name
     description: Token used for authentication against pactbroker
     default: PACTBROKER_TOKEN
-  retry-attempts-while-unkown:
+  retry_attempts_while_unkown:
     type: integer
     description: >
       The number of times to retry while there is an unknown
       verification result (ie. the provider verification is likely
       still running)
     default: 30
-  retry-interval-seconds:
+  retry_interval_seconds:
     type: integer
     description: >
       The time between retries in seconds. Use in conjuction with retry-while-unknown
@@ -40,11 +40,11 @@ parameters:
     description: The name of the pacticipant that was deployed
 executor: <<parameters.executor>>
 steps:
-  - can-i-deploy:
+  - can_i_deploy:
       pacticipant: <<parameters.pacticipant>>
       version: <<parameters.version>>
       to: <<parameters.to>>
-      pact-broker-url: <<parameters.pact-broker-url>>
-      pact-broker-token: <<parameters.pact-broker-token>>
-      retry-attempts-while-unkown: <<parameters.retry-attempts-while-unkown>>
-      retry-interval-seconds: <<parameters.retry-interval-seconds>>
+      pact-broker-url: <<parameters.pact_broker_url>>
+      pact-broker-token: <<parameters.pact_broker_token>>
+      retry-attempts-while-unkown: <<parameters.retry_attempts_while_unkown>>
+      retry-interval-seconds: <<parameters.retry_interval_seconds>>
