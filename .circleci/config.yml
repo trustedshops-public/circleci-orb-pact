@@ -43,6 +43,11 @@ commands:
       - attach_workspace:
           at: .
       - run:
+          name: Extract orb archive
+          command: |
+            cd dist/
+            tar -xvzf orb_source.tar.gz
+      - run:
           name: Setup AWS region
           command: |
             echo "export AWS_REGION=eu-central-1" >> $BASH_ENV
