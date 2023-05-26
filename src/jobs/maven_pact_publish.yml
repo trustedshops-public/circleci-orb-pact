@@ -32,9 +32,9 @@ parameters:
 executor: <<parameters.executor>>
 steps:
   - maven_pact_publish:
-      settings-file: <<parameters.settings_file>>
-      test-goal: <<parameters.test_goal>>
+      settings_file: <<parameters.settings_file>>
+      test_goal: <<parameters.test_goal>>
       version: <<parameters.version>>
       to: <<parameters.to>>
-      pact-broker-url: <<parameters.pact_broker_url>>
-      pact-broker-token: <<parameters.pact-broker_token>>
+      pact_broker_url: <<parameters.pact_broker_url>>
+      pact_broker_token: <<parameters.pact-broker_token>>

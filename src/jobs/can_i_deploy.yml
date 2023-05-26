@@ -44,7 +44,7 @@ steps:
       pacticipant: <<parameters.pacticipant>>
       version: <<parameters.version>>
       to: <<parameters.to>>
-      pact-broker-url: <<parameters.pact_broker_url>>
-      pact-broker-token: <<parameters.pact_broker_token>>
-      retry-attempts-while-unkown: <<parameters.retry_attempts_while_unkown>>
-      retry-interval-seconds: <<parameters.retry_interval_seconds>>
+      pact_broker_url: <<parameters.pact_broker_url>>
+      pact_broker_token: <<parameters.pact_broker_token>>
+      retry_attempts_while_unkown: <<parameters.retry_attempts_while_unkown>>
+      retry_interval_seconds: <<parameters.retry_interval_seconds>>
