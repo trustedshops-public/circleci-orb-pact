@@ -1,3 +1,14 @@
+## [3.0.0](https://github.com/trustedshops-public/circleci-orb-pact/compare/2.0.0...3.0.0) (2023-05-30)
+
+
+### ⚠ BREAKING CHANGES
+
+* The pact broker url is automatically prepended with https in case it does not contain a protocol.
+
+### Features
+
+* Add support for broker url without protocol ([dc83439](https://github.com/trustedshops-public/circleci-orb-pact/commit/dc834396defdd8a0772b942a8e1122803906aa1f))
+
 ## [2.0.0](https://github.com/trustedshops-public/circleci-orb-pact/compare/1.2.1...2.0.0) (2023-05-26)
 
 
