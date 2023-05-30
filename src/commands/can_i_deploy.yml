@@ -38,11 +38,19 @@ steps:
   - run:
       name: Can i deploy?
       command: |
+        pact_broker_url="$<<parameters.pact_broker_url>>"
+
+        if ! [[ "$url" =~ (http|https)://* ]]
+        then
+          echo "WARNING: pact_broker_url does not contain protocol, falling back to https."
+          pact_broker_url="https://${pact_broker_url}"
+        fi
+
         pact-broker can-i-deploy \
           --pacticipant=<<parameters.pacticipant>> \
           --version=<<parameters.version>> \
           --to=<<parameters.to>> \
-          --broker-base-url=$<<parameters.pact_broker_url>> \
+          --broker-base-url="${pact_broker_url}" \
           --broker-token=$<<parameters.pact_broker_token>> \
           --retry-while-unknown=<<parameters.retry_attempts_while_unkown>> \
           --retry-interval=<<parameters.retry_interval_seconds>>
