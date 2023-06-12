@@ -40,7 +40,7 @@ steps:
       command: |
         pact_broker_url="$<<parameters.pact_broker_url>>"
 
-        if ! [[ "$url" =~ (http|https)://* ]]
+        if ! [[ "$pact_broker_url" =~ https?://* ]]
         then
           echo "WARNING: pact_broker_url does not contain protocol, falling back to https."
           pact_broker_url="https://${pact_broker_url}"
