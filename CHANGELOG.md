@@ -1,3 +1,10 @@
+## [3.0.1](https://github.com/trustedshops-public/circleci-orb-pact/compare/3.0.0...3.0.1) (2023-06-12)
+
+
+### Bug Fixes
+
+* Enable sh support for can-i-deploy ([a6ddc79](https://github.com/trustedshops-public/circleci-orb-pact/commit/a6ddc799e2bd1308227e37551c04df7e66c472df))
+
 ## [3.0.0](https://github.com/trustedshops-public/circleci-orb-pact/compare/2.0.0...3.0.0) (2023-05-30)
 
 
