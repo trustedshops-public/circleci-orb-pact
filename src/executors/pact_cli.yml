@@ -5,7 +5,7 @@ docker:
 parameters:
   tag:
     # renovate: datasource=docker depName=pactfoundation/pact-cli versioning=regex:^(?<major>\d+)\.(?<minor>\d+)\.(?<patch>\d+)\.(?<build>\d+)$
-    default: "0.51.0.4"
+    default: "1.5.0.4"
     description: >
       Pick a specific image variant:
       https://hub.docker.com/r/pactfoundation/pact-cli/tags
